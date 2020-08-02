@@ -4,9 +4,11 @@
  * Copyright(c) 2020 kinbug Co. Ltd. 
  * All right reserved. 
  */
-package com.github.kinbug.voguedb.rpc;
+package com.github.kinbug.voguedb.rpc.entity;
 
 import java.io.Serializable;
+
+import com.github.kinbug.voguedb.enums.EnumReqType;
 
 /**
  * @ClassName: Request
@@ -18,7 +20,23 @@ public class Request<P> implements Serializable {
 
 	private static final long serialVersionUID = 1423034222392371339L;
 
-	 private P param;
+	private EnumReqType enumReqType;
+	
+	private P param;
+	
+	/**
+	 * @return the enumReqType
+	 */
+	public EnumReqType getEnumReqType() {
+		return enumReqType;
+	}
+
+	/**
+	 * @param enumReqType the enumReqType to set
+	 */
+	public void setEnumReqType(EnumReqType enumReqType) {
+		this.enumReqType = enumReqType;
+	}
 
 	/**
 	 * @return the param

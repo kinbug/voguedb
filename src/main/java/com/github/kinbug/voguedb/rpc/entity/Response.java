@@ -4,7 +4,7 @@
  * Copyright(c) 2020 kinbug Co. Ltd. 
  * All right reserved. 
  */
-package com.github.kinbug.voguedb.rpc;
+package com.github.kinbug.voguedb.rpc.entity;
 
 import java.io.Serializable;
 

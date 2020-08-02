@@ -9,6 +9,9 @@ package com.github.kinbug.voguedb.rpc;
 import com.alipay.remoting.AsyncContext;
 import com.alipay.remoting.BizContext;
 import com.alipay.remoting.rpc.protocol.AbstractUserProcessor;
+import com.github.kinbug.voguedb.enums.EnumReqType;
+import com.github.kinbug.voguedb.rpc.entity.Request;
+import com.github.kinbug.voguedb.rpc.entity.Response;
 
 /**
  * @ClassName: UserProcessor
@@ -16,7 +19,7 @@ import com.alipay.remoting.rpc.protocol.AbstractUserProcessor;
  * @author kinbug
  * @date 2020年7月31日
  */
-public class MyUserProcessor<T> extends AbstractUserProcessor<T> {
+public class UserProcessor<T> extends AbstractUserProcessor<T> {
 
 	@Override
 	public void handleRequest(BizContext bizCtx, AsyncContext asyncCtx, T request) {
@@ -35,4 +38,14 @@ public class MyUserProcessor<T> extends AbstractUserProcessor<T> {
 		return Request.class.getName();
 	}
 
+	
+	public Response<?> handlerRequest(Request<?> request) {
+        if (request.getEnumReqType() == EnumReqType.VOTE) {
+        } else if (request.getEnumReqType() == EnumReqType.ENTRIES_ADD) {
+        } else if (request.getEnumReqType() == EnumReqType.CLIENT_REQ) {
+        } else if (request.getEnumReqType() == EnumReqType.CONFIG_REMOVE) {
+        } else if (request.getEnumReqType() == EnumReqType.CONFIG_ADD) {
+        }
+        return null;
+    }
 }

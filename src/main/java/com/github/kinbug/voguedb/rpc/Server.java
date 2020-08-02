@@ -6,7 +6,10 @@
  */
 package com.github.kinbug.voguedb.rpc;
 
-  /**
+import com.github.kinbug.voguedb.rpc.entity.Request;
+import com.github.kinbug.voguedb.rpc.entity.Response;
+
+/**
  * @ClassName: RpcServer
  * @Description: TODO(类描述)
  * @author kinbug

@@ -8,6 +8,8 @@ package com.github.kinbug.voguedb.rpc;
 
 import com.alipay.remoting.BizContext;
 import com.alipay.remoting.rpc.RpcServer;
+import com.github.kinbug.voguedb.rpc.entity.Request;
+import com.github.kinbug.voguedb.rpc.entity.Response;
 
 /**
  * @ClassName: DefaultService
@@ -31,7 +33,7 @@ public class DefaultService implements Server {
 				return;
 			}
 			rpcServer = new com.alipay.remoting.rpc.RpcServer(8080, false, false);
-			rpcServer.registerUserProcessor(new MyUserProcessor<Request>());
+			rpcServer.registerUserProcessor(new UserProcessor<Request<?>>());
 			// this.node = node;
 			flag = true;
 		}
