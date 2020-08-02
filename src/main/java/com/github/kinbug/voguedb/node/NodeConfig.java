@@ -4,7 +4,7 @@
  * Copyright(c) 2020 kinbug Co. Ltd. 
  * All right reserved. 
  */
-package com.github.kinbug.voguedb.core;
+package com.github.kinbug.voguedb.node;
 
 import com.alibaba.fastjson.JSON;
 
