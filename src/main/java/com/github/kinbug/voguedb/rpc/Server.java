@@ -12,7 +12,7 @@ package com.github.kinbug.voguedb.rpc;
  * @author kinbug
  * @date 2020年7月31日
  */
-public interface RpcServer {
+public interface Server {
 
     void start();
 
